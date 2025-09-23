@@ -13,20 +13,16 @@ It enhances a standard `<input>` field with:
 - Full keyboard and screen reader accessibility
 
 
-``` .jsx
-import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+### Controlled states
+The component has two states that can be controlled:
 
-const options = ['Apple', 'Banana', 'Cherry', 'Date'];
+#### 1) Selected Value (value / onChange)
+- This is the actual choice the user makes.
+- Example: When the user picks an item from a list or presses Enter.
+- you control it with the value and onChange props.
+- Think of it as: “What the user picked.”
 
-export default function FruitAutocomplete() {
-  return (
-    <Autocomplete
-      options={options}
-      renderInput={(params) => <TextField {...params} label="Choose a fruit" />}
-    />
-  );
-}
-
-```
+2. Text in the Input Box (inputValue / onInputChange)
+- This is what the user is typing in the box.
+- You control it with the inputValue and onInputChange props.
+- Think of it as: “What the user is typing right now.”
