@@ -46,7 +46,6 @@ Material UI buttons come in 3 main styles.
 ``` jsx  
 <Button variant="text">Text Button</Button>   
 ``` 
-<Button variant="text">Text Button</Button>   
 ![alt text](assets/TextButton.png)   
 
 
@@ -76,8 +75,42 @@ Material UI provides predefined colors:
 <Button variant="contained" disabled>
   Disabled Contained
 </Button>  
+```    
+![alt text](assets/DisabledButton.png)    
+
+#### 2. Loading Button   
+
+``` jsx  
+<Button loading>Loading...</Button>  
 ```  
-<Button disabled>Can't Click Me</Button>
-<Button variant="contained" disabled>
-  Disabled Contained
-</Button>
+### Full Width Buttons 
+
+``` jsx  
+<Button fullWidth>Full Width Button</Button>  
+```  
+
+### Click Handlers  
+Make buttons do something when clicked:  
+``` jsx  
+export default function MyInteractiveButton() {
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
+
+  return (
+    <Button variant="contained" onClick={handleClick}>
+      Click Me!
+    </Button>
+  );
+}  
+```
+
+
+### Navigation Button 
+``` jsx  
+<Button variant="text" href="/about">
+  Go to About Page
+</Button>   
+```
+
+
